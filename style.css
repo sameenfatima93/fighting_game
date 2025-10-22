@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/background.gif);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+#char1 {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    height: 200px;
+    object-fit: contain;
+}
+
+#char2{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    height: 170px;
+    object-fit: contain;
+    transform: scaleX(-1);
+}
