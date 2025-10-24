@@ -50,59 +50,92 @@ var left = 0
 let left2 = 1000;
 //sb sy pehly id so get krna hy_____ //
 //phir function banana hy______//
-
+//__charecter one  pharokar
 function charecterAnimation(event){
 console.log(event.keyCode)  
-if(event.keyCode === 68){
+if(event.keyCode === 68){ // for move forword D
 left = left + 30 ;
 char1.style.left = left + "px"
  char1.src="images/move1.gif";
   char1.style.transform = "scaleX(1)";
+   setTimeout(() => {
+        char1.src = "images/charector1.gif"
+        
+    }, 1500); 
  }
- if(event.keyCode===65){
+ if(event.keyCode===65){ // move back a
  left = left - 30;
  char1.style.left = left + "px";
 char1.style.transform = "scaleX(-1)";
+ setTimeout(() => {
+        char1.src = "images/charector1.gif"
+        
+    }, 1500); 
  }
-if (event.keyCode === 32) {
+if (event.keyCode === 32) {// attack enter
     char1.src = "images/move2.gif"
     setTimeout(() => {
         char1.src = "images/charector1.gif"
         
-    }, 2500); 
+    }, 1500); 
 }
- if (event.keyCode === 37) {
+ if (event.keyCode === 37) { // tharos move forword left arrow key
     left2 -= 30; // move left
     char2.style.left = left2 + "px";
     char2.src = "images/charector 2.gif"; // your attack gif
     char2.style.transform = "scaleX(-1)";
     char2.style.height = "200px";
-   
+    setTimeout(() => {
+        char2.src = "images/chstand.gif"
+        
+    }, 1500);
   }
-  if (event.keyCode === 39) {
+  if (event.keyCode === 39) { //back right arro key
     left2 += 30; // move left
     char2.style.left = left2 + "px";
     char2.src = "images/charector 2.gif"; // your attack gif
     char2.style.transform = "scaleX(1)";
     char2.style.height = "200px";
+     setTimeout(() => {
+        char2.src = "images/chstand.gif"
+        
+    }, 1500); 
    
   }
-  if (event.keyCode === 188) {
+  if (event.keyCode === 188) { //attack greaterthan
   // Move left only if not already at edge
   if (left2 > 100) { // set 100px as minimum limit
     left2 -= 10;
   }
 
   char2.style.left = left2 + "px";
-//   char2.src = "images/ch-move2.gif";
+  char2.src = "images/ch-move2.gif";
   char2.style.transform = "scaleX(-1)";
   char2.style.height = "200px";
 
   setTimeout(() => {
-    // char2.src = "images/ch-move2.gif";
-    char2.src = "images/ch-move3.gif";
+    char2.src = "images/chstand.gif";
+    // char2.src = "images/.gif";
     // char2.style.height = "150px";
-  }, 2000);
+  }, 2500);
+}
+if (event.keyCode === 40) { //__ downarrow key for down
+  // Move left only if not already at edge
+  if (left2 > 100) { // set 100px as minimum limit
+    left2 -= 10;
+  }
+
+  char2.style.left = left2 + "px";
+  char2.src = "images/ch-move1.gif";
+  char2.style.transform = "scaleX(1)";
+  char2.style.height = "200px";
+
+  setTimeout(() => {
+    char2.src = "images/chstand.gif";
+    char2.style.transform = "scaleX(-1)";
+    // char2.src = "images/.gif";
+    // char2.style.height = "150px";
+  }, 1000);
 }
 
 

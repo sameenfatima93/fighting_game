@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>splashCreen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            height: 100vh;
+            width: 100%;
+            background-image: url(../images/splash2.gif);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .text {
+            position: relative;
+            top: 20px;
+            height: 150px;
+            width: 450px;
+            border: 5px solid rgb(133, 132, 132);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            margin: 0px auto;
+            padding: 10px;
+            backdrop-filter: blur(9px);
+            background-color: rgba(255, 255, 255, 0.094);
+        }
+
+        .heading {
+            font-size: 40px;
+            font-weight: 900;
+            font-family: monospace;
+        }
+
+        .bbh-sans-bartle-regular {
+            font-family: "BBH Sans Bartle", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            text-align: center;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .images {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 40px;
+            height: 400px;
+            width: 900px;
+            /* border: 2px solid red; */
+            margin: 0px auto;
+
+        }
+
+        .img1 {
+            height: 320px;
+            width: 270px;
+            background-color: black;
+            border: 5px solid rgb(51, 118, 51);
+            /* padding-top: 30px; */
+            margin-top: 30px;
+            padding: 5px;
+            border-radius: 10px;
+            object-fit: fill;
+            text-align: center;
+        }
+
+        .img2 {
+            height: 320px;
+            width: 270px;
+            width: 300px;
+            background-color: black;
+            border: 5px solid rgb(167, 65, 65);
+            margin-top: 30px;
+            padding: 5px;
+            border-radius: 10px;
+            object-fit: fill;
+            text-align: center;
+            
+        }
+        .img2>img{
+transform: scaleX(-1);
+        }
+
+        .img2>p {
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-top: 15px;
+            
+        }
+
+        .img1>p {
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-top: 15px;
+        }
+
+        .vs {
+            position: relative;
+            top: 50px;
+            /* margin: 0px auto; */
+
+        }
+
+        .vs>button {
+            height: 50px;
+            width: 120px;
+            background-color: rgb(4, 4, 4);
+            border-radius: 10px;
+            position: relative;
+            left: 50px;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="text">
+            <h1 class="heading bbh-sans-bartle-regular">Street Fighter</h1>
+        </div>
+        <div class="images">
+            <div class="img1">
+                
+                <img src="../images/Tharos.gif" alt="" height="250px">
+                <p>PHAROKER</p>
+            </div>
+            <div class="vs">
+                <img src="../images/vs.png" alt="">
+                <button onclick="keyPage()">Next</button>
+                
+            </div>
+            <div class="img2">
+                <img src="../images/Pharokar.gif" alt="" height="250px">
+                <p>THAROS</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function keyPage() {
+            window.location.href="keycode.html"
+        }
+        
+    </script>
+</body>
+
+</html>
