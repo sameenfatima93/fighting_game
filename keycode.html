@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>splashCreen</title>
+    <title>Instructions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
-
     <style>
         * {
             margin: 0;
@@ -88,10 +87,11 @@
             border-radius: 10px;
             object-fit: fill;
             text-align: center;
-            
+
         }
-        .img2>img{
-transform: scaleX(-1);
+
+        .img2>img {
+            transform: scaleX(-1);
         }
 
         .img2>p {
@@ -99,7 +99,7 @@ transform: scaleX(-1);
             font-size: 30px;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             margin-top: 15px;
-            
+
         }
 
         .img1>p {
@@ -121,11 +121,26 @@ transform: scaleX(-1);
             width: 120px;
             background-color: rgb(4, 4, 4);
             border-radius: 10px;
-            position: relative;
-            left: 50px;
+            margin: 90px auto;
             color: rgb(255, 255, 255);
             cursor: pointer;
             border: none;
+        }
+        ul{
+            color: rgb(254, 254, 254);
+            list-style:disc;
+           text-align: left;
+           padding-left: 30px;
+           padding-top: 40px; 
+        }
+        li{
+            padding: 10px;
+            font-weight: 800;
+            color: rgb(240, 17, 17);
+        }
+        span{
+            font-weight: 500;
+            color: rgb(255, 255, 255);
         }
     </style>
 </head>
@@ -137,26 +152,39 @@ transform: scaleX(-1);
         </div>
         <div class="images">
             <div class="img1">
-                
-                <img src="../images/Tharos.gif" alt="" height="250px">
                 <p>PHAROKER</p>
+                <ul>
+                    <li><span>Move Farword = </span>  D </li>
+                    <li><span>Move Back = </span> A </li>
+                    <li><span>Attack = </span> space Key </li>
+                    
+                </ul>
             </div>
             <div class="vs">
-                <img src="../images/vs.png" alt="">
-                <button onclick="keyPage()">Next</button>
-                
+
+                <button onclick="homePage()">START GAME</button>
+                <button onclick="splashPage()">back</button>
             </div>
             <div class="img2">
-                <img src="../images/Pharokar.gif" alt="" height="250px">
                 <p>THAROS</p>
+                <ul>
+                    <li><span>Move Farword = </span> left Arrow-key </li>
+                    <li><span>Move Back = </span> Right Arrow-key </li>
+                    <li><span>Attack = </span> lessthan </li>
+                    <li><span>Attack = </span> Down Arrow-key </li>
+                    
+                </ul>
             </div>
         </div>
+
     </div>
     <script>
-        function keyPage() {
-            window.location.href="keycode.html"
+        function homePage() {
+            window.location.href="home.html"
         }
-        
+         function splashPage() {
+            window.location.href="index.html"
+        }
     </script>
 </body>
 

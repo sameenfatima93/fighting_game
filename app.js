@@ -162,6 +162,31 @@ if (event.keyCode === 40) { //__ downarrow key for down
 window.onkeydown = charecterAnimation;
 //3rd number sb sy pehly function ko call krna hy with onkeydown ky is key ky press pr ye kam ho_____///
 
+ // 🎯 Initial scores
+let score1 = 0;
+let score2 = 0;
+
+// 🎯 Update scores on screen
+function updateScores() {
+  document.getElementById("score1").innerText = score1;
+  document.getElementById("score2").innerText = score2;
+}
+
+// 🎯 Check hit function
+function checkHit(attacker) {
+  // check dono characters ke distance
+  if (Math.abs(left - left2) < 100) {
+    if (attacker === "player1") {
+      score1 += 10; // sirf player 1 ka score barhe
+    } else if (attacker === "player2") {
+      score2 += 10; // sirf player 2 ka score barhe
+    }
+    updateScores();
+  }
+}
+
+
+
 
 
 
